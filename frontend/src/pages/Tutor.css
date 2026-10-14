@@ -1,0 +1,96 @@
+.tutor-chat-panel {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tutor-messages {
+  flex: 1;
+  min-height: 390px;
+  max-height: min(65vh, 680px);
+  overflow-y: auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tutor-user-message {
+  align-self: flex-end;
+  max-width: min(80%, 620px);
+  overflow-wrap: anywhere;
+}
+
+.tutor-user-message p,
+.tutor-ai-bubble {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tutor-ai-message {
+  align-items: flex-start;
+}
+
+.tutor-answer {
+  min-width: 0;
+  max-width: min(88%, 760px);
+}
+
+.tutor-ai-bubble {
+  line-height: 1.65;
+}
+
+.tutor-message-tools {
+  flex-wrap: wrap;
+}
+
+.tutor-thinking .ai-bubble {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.tutor-error {
+  margin: 0 20px 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #a13e4a;
+  background: #fff0f1;
+  font-size: 13px;
+}
+
+.tutor-compose input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+}
+
+.tutor-compose .send:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.tutor-history-empty {
+  padding: 5px 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .tutor-chat-panel {
+    min-height: 460px;
+  }
+
+  .tutor-messages {
+    min-height: 330px;
+    max-height: 60vh;
+    padding: 16px;
+  }
+
+  .tutor-user-message,
+  .tutor-answer {
+    max-width: 92%;
+  }
+}

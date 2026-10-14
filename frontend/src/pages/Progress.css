@@ -1,0 +1,116 @@
+.progress-period {
+  color: var(--muted, #777);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-message {
+  color: var(--muted, #777);
+  margin: 16px 0;
+}
+
+.progress-activity-panel,
+.progress-recent-panel {
+  margin-top: 20px;
+}
+
+.progress-activity-chart {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  height: 190px;
+  padding: 12px 4px 0;
+}
+
+.progress-activity-day {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: end;
+  gap: 8px;
+}
+
+.progress-activity-bar {
+  background: #7267ef;
+  border-radius: 7px 7px 2px 2px;
+  min-height: 3px;
+  width: min(100%, 36px);
+}
+
+.progress-activity-day small {
+  color: var(--muted, #777);
+}
+
+.progress-score-row {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(120px, 1fr) minmax(100px, 2fr) minmax(90px, auto);
+  margin-top: 17px;
+}
+
+.progress-score-row > span {
+  font-weight: 600;
+}
+
+.progress-score-track {
+  background: #eeedf5;
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-score-track span {
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+}
+
+.progress-score-row b {
+  font-size: 13px;
+  text-align: right;
+}
+
+.progress-activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.progress-activity-list li {
+  align-items: center;
+  border-top: 1px solid #eeedf5;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 13px 0;
+}
+
+.progress-activity-list li:first-child {
+  border-top: 0;
+}
+
+.progress-activity-list time {
+  color: var(--muted, #777);
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .progress-score-row {
+    gap: 8px;
+    grid-template-columns: minmax(85px, 1fr) minmax(55px, 1.2fr) auto;
+  }
+
+  .progress-score-row b {
+    font-size: 11px;
+  }
+
+  .progress-activity-list li {
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: npm install --no-fund --no-audit
+
+      - name: Run backend tests
+        working-directory: backend
+        env:
+          JWT_SECRET: test-secret
+        run: npm test
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm install --no-fund --no-audit
+
+      - name: Build frontend
+        working-directory: frontend
+        env:
+          VITE_API_URL: http://localhost:5000/api
+        run: npm run build

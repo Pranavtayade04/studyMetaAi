@@ -1,0 +1,86 @@
+.subject-description {
+  color: var(--muted);
+  line-height: 1.5;
+  min-height: 40px;
+  margin: 5px 0 12px;
+}
+
+.subject-large {
+  position: relative;
+}
+
+.subject-large .subject-delete {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  padding: 7px;
+  color: var(--muted);
+  border-radius: 7px;
+}
+
+.subject-large .subject-delete:hover {
+  color: #c44c5a;
+  background: #fff0f1;
+}
+
+.subjects-error {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #a13e4a;
+  background: #fff0f1;
+  font-size: 13px;
+}
+
+.subject-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subject-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #535467;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.subject-form input,
+.subject-form textarea {
+  width: 100%;
+  border: 1px solid #e2e2ea;
+  border-radius: 8px;
+  padding: 11px 12px;
+  outline: 0;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+  resize: vertical;
+}
+
+.subject-form input:focus,
+.subject-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #eae9ff;
+}
+
+.subject-form-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.subject-form button:disabled,
+.modal-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .subject-form-numbers {
+    grid-template-columns: 1fr;
+  }
+}

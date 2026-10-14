@@ -1,0 +1,102 @@
+.admin-section {
+  margin-top: 20px;
+}
+
+.admin-message {
+  color: var(--muted, #777);
+  margin: 12px 0;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  border-collapse: collapse;
+  min-width: 650px;
+  text-align: left;
+  width: 100%;
+}
+
+.admin-table th,
+.admin-table td {
+  border-top: 1px solid var(--line, #e9e9f0);
+  padding: 13px 12px;
+}
+
+.admin-table th {
+  color: var(--muted, #777);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-table td {
+  font-size: 13px;
+}
+
+.admin-role {
+  background: #f0efff;
+  border-radius: 999px;
+  color: #625bd1;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 9px;
+  text-transform: capitalize;
+}
+
+.admin-role.is-admin {
+  background: #e7f7f2;
+  color: #27866f;
+}
+
+.admin-activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-activity-list li {
+  align-items: center;
+  border-top: 1px solid var(--line, #e9e9f0);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 13px 0;
+}
+
+.admin-activity-list li:first-child {
+  border-top: 0;
+}
+
+.admin-activity-list li > div {
+  display: grid;
+  gap: 3px;
+}
+
+.admin-activity-list b {
+  font-size: 13px;
+}
+
+.admin-activity-list span,
+.admin-activity-list time {
+  color: var(--muted, #777);
+  font-size: 12px;
+}
+
+.admin-activity-list p {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.admin-activity-list time {
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .admin-activity-list li {
+    align-items: start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
